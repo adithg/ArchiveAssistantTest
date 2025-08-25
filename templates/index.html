@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Way with Henry Shukman - Teaching Archive</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>The Way with Henry Shukman</h1>
+            <p>Discover wisdom through direct quotes and video teachings</p>
+        </header>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Welcome to The Way. I can help you discover Henry's wisdom through his direct teachings. Ask me about meditation, consciousness, or any aspect of the path, and I'll share his exact words along with video clips from his sessions.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-group">
+                    <input type="text" 
+                           id="questionInput" 
+                           placeholder="What aspect of the way would you like to explore?" 
+                           maxlength="500">
+                    <button id="sendButton" onclick="sendMessage()">Send</button>
+                </div>
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Exploring the teachings...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
